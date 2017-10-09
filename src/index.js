@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
+import Modules from './components/modules/Modules'
+
 import { reducers } from './reducers.js'
 
 import './stylesheets/main.scss'
@@ -19,7 +21,9 @@ const store = createStore
 ReactDOM.render
 (
   <Provider store={store}>
-    <div>Title</div>
+    <div id="container" className="container">
+      <Modules/>
+    </div>
   </Provider>
   ,
   document.getElementById( "app" )
