@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import Module from './Module'
+
 /**
  * Module listing for the current training.
  */
@@ -13,7 +15,17 @@ class Modules extends React.Component
 
     return (
       <div>
-        <h1>{ this.props.course.title }</h1>
+        <div className="page-header">
+          <h1>{ this.props.course.title }</h1>
+        </div>
+
+        <ul className="list-group">
+          {
+            this.props.course.modules.map( ( module, index ) =>
+              <Module key={index} data={module}/>
+            )
+          }
+        </ul>
       </div>
     )
   }
