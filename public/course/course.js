@@ -1,0 +1,4 @@
+var course =
+{
+  title: 'Bootstrap'
+}

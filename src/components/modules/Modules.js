@@ -12,9 +12,16 @@ class Modules extends React.Component
       return null
 
     return (
-      <div>modules</div>
+      <div>
+        <h1>{ this.props.course.title }</h1>
+      </div>
     )
   }
 }
 
-export default connect( state => ({ view: state.view }) )( Modules )
+export default connect( state =>
+  ({
+    view: state.view,
+    course: state.course
+  })
+)( Modules )

@@ -9,7 +9,7 @@ import { reducers } from './reducers.js'
 
 import './stylesheets/main.scss'
 
-const initial = { view: 'modules' } // initial drawing state
+const initial = { view: 'modules', course } // initial drawing state
 
 const store = createStore
 (
