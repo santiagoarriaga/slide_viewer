@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * A single module list entry.
@@ -8,7 +9,9 @@ export default class Module extends React.Component
   render()
   {
     return (
-      <li className="list-group-item module">
+      <li className="list-group-item module"
+        onClick={ () => this.props.onClick( this.props.data ) }
+      >
         <strong>
           { this.props.data.name }
           { ( this.props.data.title ? ': ' : '' ) }
@@ -22,5 +25,6 @@ export default class Module extends React.Component
 
 Module.propTypes =
 {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired
 }

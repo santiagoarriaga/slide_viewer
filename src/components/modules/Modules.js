@@ -8,6 +8,17 @@ import Module from './Module'
  */
 class Modules extends React.Component
 {
+
+  constructor( props )
+  {
+    super( props )
+
+    this.showModule = this.showModule.bind( this )
+  }
+
+  showModule( module )
+    { this.props.dispatch({ type: 'moduleShow', id: module.id }) }
+
   render()
   {
     if( this.props.view != 'modules' )
@@ -22,7 +33,9 @@ class Modules extends React.Component
         <ul className="list-group">
           {
             this.props.course.modules.map( ( module, index ) =>
-              <Module key={index} data={module}/>
+              <Module key={index} data={module}
+                onClick={ this.showModule }
+              />
             )
           }
         </ul>
