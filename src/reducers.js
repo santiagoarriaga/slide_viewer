@@ -1,5 +1,9 @@
 function showModule( state, module )
-  { return Object.assign( {}, state, { view: 'slides', module } ) }
+{
+  module.selected = 0
+
+  return Object.assign( {}, state, { view: 'slides', module } )
+}
 
 /**
  * Main hub for redux change requests.

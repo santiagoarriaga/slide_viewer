@@ -17,10 +17,12 @@ class Slides extends React.Component
     if( this.props.view != 'slides' )
       return null
 
+    const slide = this.props.module.slides[ this.props.module.selected ]
+
     return (
       <div>
         <div className="page-header">
-          <h1>title</h1>
+          <h1>{ slide.title }</h1>
         </div>
 
         SLIDE
