@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import HomeLink from '../HomeLink'
 import Module from './Module'
 
 /**
@@ -27,7 +28,7 @@ class Modules extends React.Component
     return (
       <div>
         <header>
-          <a className="home" href="#"></a>
+          <HomeLink/>
           <h1>{ this.props.course.title }</h1>
         </header>
 

@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import HomeLink from '../HomeLink'
+
 /**
  * Show the slides of the selected module.
  */
@@ -22,7 +24,7 @@ class Slides extends React.Component
     return (
       <div>
         <header>
-          <a className="home" href="#"></a>
+          <HomeLink/>
           <h1>{ slide.title }</h1>
         </header>
 
