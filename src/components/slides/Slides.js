@@ -2,17 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import HomeLink from '../HomeLink'
+import Next from './Next'
+import Previous from './Previous'
 
 /**
  * Show the slides of the selected module.
  */
 class Slides extends React.Component
 {
-
-  constructor( props )
-  {
-    super( props )
-  }
 
   render()
   {
@@ -32,6 +29,8 @@ class Slides extends React.Component
           <img className="img-fluid"
             src={ 'course/' + slide.image }
           ></img>
+          <Previous/>
+          <Next/>
         </div>
       </div>
     )

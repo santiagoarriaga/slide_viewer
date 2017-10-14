@@ -1,12 +1,18 @@
+$break-small: 550px;
+
 header
 {
   position: relative;
+  height: 60px;
 
   & > h1
   {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+
+    @media screen and ( max-width: $break-small )
+      { font-size: 1.5rem; }
   }
 
   & > a
@@ -25,11 +31,51 @@ header
 {
   cursor: pointer;
 
-  & > i
-    { padding: 2px }
+  & > i { padding: 2px }
 }
 
-.slide > img
+.slide
 {
-  padding: 0px 60px;
+  position: relative;
+
+  & > img
+  {
+    padding: 0px 60px;
+
+    @media screen and (max-width: $break-small)
+      { padding: 0px 30px }
+  }
+
+  & > .navigation.control
+  {
+    position: absolute;
+    font-size: 50px;
+    top: 50%;
+    margin-top: -25px;
+    opacity: .3;
+
+    &:hover { opacity: 1; cursor: pointer; }
+
+    @media screen and (max-width: $break-small)
+    {
+      font-size: 24px;
+      margin-top: -12px;
+    }
+  }
+
+  & > .next
+  {
+    right: 5px;
+
+    @media screen and (max-width: $break-small)
+      { right: 3px }
+  }
+
+  & > .previous
+  {
+    left: 5px;
+
+    @media screen and (max-width: $break-small)
+      { left: 3px }
+  }
 }

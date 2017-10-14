@@ -16,6 +16,16 @@ function showModules( state )
   { return Object.assign( {}, state, { view: 'modules' } ) }
 
 /**
+ * Show a single slide.
+ */
+function showSlide( state, selected )
+{
+  const module = Object.assign( {}, state.module, { selected } )
+
+  return Object.assign( {}, state, { module } )
+}
+
+/**
  * Main hub for redux change requests.
  */
 export function reducers( state, action )
@@ -24,6 +34,7 @@ export function reducers( state, action )
   {
     case 'module.show': return showModule( state, action.module )
     case 'modules.show': return showModules( state )
+    case 'slide.show': return showSlide( state, action.index )
   }
 
   return state
