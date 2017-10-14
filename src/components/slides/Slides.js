@@ -21,11 +21,16 @@ class Slides extends React.Component
 
     return (
       <div>
-        <div className="page-header">
+        <header>
+          <a className="home" href="#"></a>
           <h1>{ slide.title }</h1>
-        </div>
+        </header>
 
-        SLIDE
+        <div className="slide">
+          <img className="img-fluid"
+            src={ 'course/' + slide.image }
+          ></img>
+        </div>
       </div>
     )
   }

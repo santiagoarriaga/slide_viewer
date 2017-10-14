@@ -30,7 +30,7 @@ sagaMiddleware.run( sagas )
 ReactDOM.render
 (
   <Provider store={store}>
-    <div id="container" className="container">
+    <div id="container" className="container-fluid">
       <Modules/>
       <Slides/>
     </div>

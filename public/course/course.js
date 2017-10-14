@@ -1,6 +1,6 @@
 var course =
 {
-  title: 'Bootstrap',
+  title: 'Taller: Bootstrap',
   modules:
   [
     { id: 'm0', name: 'Copyright', title: '' },

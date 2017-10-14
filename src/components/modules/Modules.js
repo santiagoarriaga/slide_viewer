@@ -26,9 +26,10 @@ class Modules extends React.Component
 
     return (
       <div>
-        <div className="page-header">
+        <header>
+          <a className="home" href="#"></a>
           <h1>{ this.props.course.title }</h1>
-        </div>
+        </header>
 
         <ul className="list-group">
           {
