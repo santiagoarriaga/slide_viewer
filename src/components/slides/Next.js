@@ -29,7 +29,7 @@ class Next extends React.Component
       return null
 
     return (
-      <i className="control navigation next fa fa-arrow-circle-right"
+      <i className="control navigation right-control fa fa-arrow-circle-right"
         onClick={ this.displayNext }
       ></i>
     )

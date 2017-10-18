@@ -46,24 +46,29 @@ header
       { padding: 0px 30px }
   }
 
-  & > .navigation.control
+  & > .control
   {
     position: absolute;
     font-size: 50px;
-    top: 50%;
-    margin-top: -25px;
     opacity: .3;
+    margin-top: -25px;
+    color: black;
 
-    &:hover { opacity: 1; cursor: pointer; }
+    &:hover
+    {
+      opacity: 1;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
     @media screen and (max-width: $break-small)
     {
       font-size: 24px;
-      margin-top: -12px;
+      margin-top: -12px
     }
   }
 
-  & > .next
+  & > .right-control
   {
     right: 5px;
 
@@ -71,11 +76,18 @@ header
       { right: 3px }
   }
 
-  & > .previous
+  & > .left-control
   {
     left: 5px;
 
     @media screen and (max-width: $break-small)
       { left: 3px }
   }
+
+  & > .navigation.control
+    { top: 50% }
+
+  & > .external-link
+    { top: 25% }
+
 }

@@ -27,7 +27,7 @@ class Previous extends React.Component
       return null
 
     return (
-      <i className="control navigation previous fa fa-arrow-circle-left"
+      <i className="control navigation left-control fa fa-arrow-circle-left"
         onClick={ this.displayPrevious }
       ></i>
     )

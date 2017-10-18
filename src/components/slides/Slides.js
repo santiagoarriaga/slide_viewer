@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import ExternalLink from './ExternalLink'
 import HomeLink from '../HomeLink'
 import Next from './Next'
 import Previous from './Previous'
@@ -29,6 +30,7 @@ class Slides extends React.Component
           <img className="img-fluid"
             src={ 'course/' + slide.image }
           ></img>
+          <ExternalLink slide={slide}/>
           <Previous/>
           <Next/>
         </div>
