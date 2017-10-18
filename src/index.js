@@ -21,7 +21,8 @@ if( process.env.NODE_ENV != 'production' )
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 
-const initial = { view: 'modules', course } // initial drawing state
+const cloned = Object.assign( {}, course ) // global course may change, clone it for state
+const initial = { view: 'modules', course: cloned } // initial drawing state
 
 const store = createStore( reducers, initial, middleware )
 

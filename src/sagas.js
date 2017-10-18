@@ -6,13 +6,17 @@ import { call, fork, put } from 'redux-saga/effects'
  */
 function* moduleShow( action )
 {
-  const module = yield call( () =>
-  {
-    return fetch( `course/${ action.id }.json` )
-    . then( response => response.json() )
-  })
+  const id = action.id
 
-  const event = { type: 'module.show', module }
+  const module = yield call( () => new Promise( resolve =>
+  {
+    if( course[ id ] ) // already loaded
+      resolve()
+    else
+      $script( `course/${ id }.js`, () => resolve() )
+  }))
+
+  const event = { type: 'module.show', module: course[ id ] }
 
   yield put( event )
 }
