@@ -27,3 +27,5 @@ section, use npm to build and ( optionally ) run.
 - npm start            # to run interactively, and http://localhost:8080
 
 Static HTML files can also be generated using the webpack configuration.
+
+- npm run build-prod
