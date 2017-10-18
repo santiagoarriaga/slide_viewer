@@ -25,7 +25,7 @@ class Slides extends React.Component
           <h1>{ slide.title }</h1>
         </header>
 
-        <div className="slide">
+        <div className="slide text-center">
           <img className="img-fluid"
             src={ 'course/' + slide.image }
           ></img>
